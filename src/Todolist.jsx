@@ -21,7 +21,7 @@ function Movetaskup(index){
 
   return (
     <>
-      <div>
+      <div className="todolist">
         <h1>To do list Created By Sanju devadas</h1>
         <div>
           <input
