@@ -11,9 +11,12 @@ function Todolist() {
 
   }
 
-function Deletetask()
+function Deletetask(index)
 {
     
+}
+function Movetaskup(index){
+
 }
 
   return (
@@ -33,7 +36,15 @@ function Deletetask()
             {task.map((c, index) => 
               <li key={index}>
                 <span className="text">{c}</span>
-                <button className="deletebutton" onClick={Deletetask}>Delete</button>
+                <button className="deletebutton" onClick={()=>Deletetask(index)}>
+                  Delete
+                  </button>
+                  <button className="movebutton" onClick={()=>Movetaskup(index)}>
+                  👆
+                  </button>
+                  <button className="movebutton" onClick={()=>Movetaskdown(index)}>
+                  👇
+                  </button>
               </li>
             )}
           </ol>
