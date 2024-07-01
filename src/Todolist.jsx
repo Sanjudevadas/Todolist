@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 function Todolist() {
-  const [task, setTask] = useState(["sanju", "rayya", "phyo"]);
+  const [task, setTask] = useState([]);
   const [newtask, setNewtask] = useState("");
   
   
@@ -8,21 +8,46 @@ function Todolist() {
     setNewtask(event.target.value);
   }
   function Addtasks(){
+   if(newtask.trim() !== ""){
+    setTask(t=>[...t,newtask]);
+    setNewtask("");
 
+   }
+
+   
   }
 
 function Deletetask(index)
 {
+  const updatetask= task.filter((element,i)=> i !== index);
+  setTask(updatetask);
     
 }
 function Movetaskup(index){
+  if(index>0){
+    const updatedtask= [...task];
+    [updatedtask[index],updatedtask[index-1]]=
+    [updatedtask[index-1],updatedtask[index]]
+    setTask(updatedtask);
+  }
 
 }
+function Movetaskdown(index){
+  if(index< task.length - 1){
+    const updatedtask= [...task];
+    [updatedtask[index],updatedtask[index+1]]=
+    [updatedtask[index+1],updatedtask[index]]
+    setTask(updatedtask);
+  }
+
+}
+
 
   return (
     <>
       <div className="todolist">
-        <h1>To do list Created By Sanju devadas</h1>
+        <h1>To Do List </h1>
+        <h3>Created By Sanju Devadas</h3>
         <div>
           <input
             type="text"
