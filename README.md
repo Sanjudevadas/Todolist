@@ -24,5 +24,5 @@ LocalStorage: To persist tasks between sessions.
 A big thank you to the React community for their invaluable resources and support.
 
 ## 🌐 Connect with Me
-GitHub :
-LinkedIn :
+GitHub : https://github.com/Sanjudevadas
+LinkedIn :https://www.linkedin.com/in/sanju-devadas-44a8a720b/
